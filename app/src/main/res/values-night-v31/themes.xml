@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Base.Theme.FastChat" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="android:windowSplashScreenIconBackgroundColor">@color/back</item>
+        <!-- Customize your dark theme here. -->
+        <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+        <item name="colorPrimary">@color/blue</item>
+        <item name="android:popupMenuStyle">@style/PopupMenuStyle</item>
+    </style>
+</resources>

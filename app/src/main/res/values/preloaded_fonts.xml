@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="preloaded_fonts" translatable="false">
+        <item>@font/mukta_mahee</item>
+        <item>@font/mukta_mahee_bold</item>
+        <item>@font/mukta_mahee_extrabold</item>
+        <item>@font/mukta_mahee_light</item>
+        <item>@font/mukta_mahee_medium</item>
+        <item>@font/mukta_mahee_semibold</item>
+    </array>
+</resources>

@@ -1,0 +1,3 @@
+com.example.fastchat.test
+style WhiteBackgroundDialogTheme
+style WhiteBackgroundTheme

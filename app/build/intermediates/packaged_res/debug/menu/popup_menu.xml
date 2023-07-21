@@ -1,0 +1,14 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/option1"
+        android:title="Create a channel" />
+    <item
+        android:id="@+id/option2"
+        android:title="Message a number" />
+    <item
+        android:id="@+id/option3"
+        android:title="Message scheduler" />
+    <item
+        android:id="@+id/option4"
+        android:title="Settings" />
+</menu>

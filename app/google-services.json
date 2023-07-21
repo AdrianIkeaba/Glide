@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "1064203614612",
+    "firebase_url": "https://fastchat-3c090.firebaseio.com",
+    "project_id": "fastchat-3c090",
+    "storage_bucket": "fastchat-3c090.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1064203614612:android:91404ece3b7bc4b30db781",
+        "android_client_info": {
+          "package_name": "com.example.fastchat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1064203614612-vmtee88pflu542prqsekq6sn9gmoe8ln.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBVElvJnc4nl8WuF5lAZvn_Ha7BWDYPTQ8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1064203614612-vmtee88pflu542prqsekq6sn9gmoe8ln.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

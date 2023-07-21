@@ -1,0 +1,3 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="#0000FF" /> <!-- Set the color to blue -->
+</shape>

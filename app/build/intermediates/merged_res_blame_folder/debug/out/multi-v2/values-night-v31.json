@@ -1,0 +1,28 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.example.fastchat.app-mergeDebugResources-57:/values-night-v31/values-night-v31.xml",
+            "map": [
+                {
+                    "source": "/Users/adrianikeaba/AndroidStudioProjects/Glide/app/src/main/res/values-night-v31/themes.xml",
+                    "from": {
+                        "startLines": "3",
+                        "startColumns": "4",
+                        "startOffsets": "56",
+                        "endLines": "9",
+                        "endColumns": "12",
+                        "endOffsets": "483"
+                    },
+                    "to": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "8",
+                        "endColumns": "12",
+                        "endOffsets": "378"
+                    }
+                }
+            ]
+        }
+    ]
+}
