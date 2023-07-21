@@ -1,3 +1,4 @@
 *.csharp linguist-detectable=true  
 *.js linguist-detectable=false  
-*.html linguist-detectable=false  
+*.html linguist-detectable=false
+*.asm linguist-detectable=false
