@@ -18,6 +18,9 @@ import com.example.fastchat.databinding.ReceiveMsgBinding
 import com.example.fastchat.databinding.SendMsgBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.FirebaseDatabase
+import java.text.SimpleDateFormat
+import java.util.Date
+import java.util.Locale
 
 class MessageAdapter(
     private val context: Context,
@@ -62,12 +65,16 @@ class MessageAdapter(
 
         if (holder is SentMsgHolder) {
 
+            val timestamp = message.timeStamp
+
+            val timeString = timestamp?.let { convertTimestampToTime(it) } // Output: "12:22 AM"
+            holder.binding.time.text = timeString
+
             if (message.message == "photo") {
                 holder.binding.image.visibility = View.VISIBLE
                 holder.binding.sendMessage.visibility = View.GONE
                 holder.binding.hLinear.setBackgroundColor(Color.TRANSPARENT)
                 holder.binding.imageCard.visibility = View.VISIBLE
-
                 Glide.with(context)
                     .load(message.imageUrl)
                     .placeholder(R.drawable.placeholder)
@@ -94,6 +101,11 @@ class MessageAdapter(
                 true
             }
         } else if (holder is ReceiveMsgHolder) {
+
+            val timestamp = message.timeStamp
+
+            val timeString = timestamp?.let { convertTimestampToTime(it) } // Output: "12:22 AM"
+            holder.binding.time.text = timeString
 
             if (message.message == "photo") {
                 holder.image.visibility = View.VISIBLE
@@ -211,6 +223,12 @@ class MessageAdapter(
         val binding: ReceiveMsgBinding = ReceiveMsgBinding.bind(itemView)
         val sendMessage: TextView = binding.sendMessage
         val image: ImageView = binding.image
+    }
+
+    fun convertTimestampToTime(timestamp: Long): String {
+        val date = Date(timestamp)
+        val sdf = SimpleDateFormat("h:mm a", Locale.getDefault())
+        return sdf.format(date)
     }
 
 }
