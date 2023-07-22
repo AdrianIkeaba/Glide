@@ -111,6 +111,11 @@ class MessageAdapter(
                     intent.putExtra("imageUrl", message.imageUrl)
                     context.startActivity(intent)
                 }
+                holder.binding.image.setOnLongClickListener {
+                    showDeleteDialog(message)
+                    true
+                }
+
             } else {
                 holder.sendMessage.text = message.message
                 holder.image.visibility = View.GONE
