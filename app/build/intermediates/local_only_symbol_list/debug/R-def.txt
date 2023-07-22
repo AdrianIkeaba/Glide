@@ -153,6 +153,7 @@ id textView
 id textView2
 id textView3
 id textView4
+id time
 id userImage
 id userImg
 id userName

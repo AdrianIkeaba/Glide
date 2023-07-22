@@ -36,15 +36,19 @@ public final class SendMsgBinding implements ViewBinding {
   @NonNull
   public final TextView sendMessage;
 
+  @NonNull
+  public final TextView time;
+
   private SendMsgBinding(@NonNull LinearLayout rootView, @NonNull LinearLayout hLinear,
       @NonNull ImageView image, @NonNull CardView imageCard, @NonNull LinearLayout mLinear,
-      @NonNull TextView sendMessage) {
+      @NonNull TextView sendMessage, @NonNull TextView time) {
     this.rootView = rootView;
     this.hLinear = hLinear;
     this.image = image;
     this.imageCard = imageCard;
     this.mLinear = mLinear;
     this.sendMessage = sendMessage;
+    this.time = time;
   }
 
   @Override
@@ -100,8 +104,14 @@ public final class SendMsgBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.time;
+      TextView time = ViewBindings.findChildViewById(rootView, id);
+      if (time == null) {
+        break missingId;
+      }
+
       return new SendMsgBinding((LinearLayout) rootView, hLinear, image, imageCard, mLinear,
-          sendMessage);
+          sendMessage, time);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

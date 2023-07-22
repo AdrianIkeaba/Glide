@@ -34,6 +34,7 @@
             android:id="@+id/sendMessage"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="start"
             android:fontFamily="@font/mukta_mahee"
             android:minLines="1"
             android:text="Hello, how are you?"

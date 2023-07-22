@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mLinear"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:gravity="right|center_horizontal"
-    android:orientation="vertical">
+    android:layout_gravity="right"
+    android:gravity="right"
+    android:orientation="vertical"
+    app:layout_anchorGravity="right">
 
     <LinearLayout
         android:id="@+id/hLinear"
@@ -15,27 +18,29 @@
         android:layout_marginEnd="10dp"
         android:background="@drawable/send_drawable"
         android:foregroundGravity="right"
-        android:gravity="right|center_horizontal"
+        android:gravity="end"
         android:orientation="vertical"
         android:padding="15dp"
-        app:layout_anchorGravity="right">
+        app:layout_anchorGravity="end">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:gravity="right">
 
-            <TextView
-                android:id="@+id/sendMessage"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/mukta_mahee"
-                android:minLines="1"
-                android:text="Hello, how are you?"
-                android:textAlignment="textStart"
-                android:textColor="#FFFFFF"
-                android:textSize="15sp" />
         </LinearLayout>
+
+        <TextView
+            android:id="@+id/sendMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:fontFamily="@font/mukta_mahee"
+            android:minLines="1"
+            android:text="Hello, how are you?"
+            android:textAlignment="textStart"
+            android:textColor="#FFFFFF"
+            android:textSize="15sp" />
 
         <androidx.cardview.widget.CardView
             android:id="@+id/imageCard"
@@ -63,5 +68,15 @@
 
         </androidx.cardview.widget.CardView>
 
+        <TextView
+            android:id="@+id/time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="12:00am"
+            android:textColor="#DCDCDC"
+            android:textSize="8sp" />
+
     </LinearLayout>
+
 </LinearLayout>
