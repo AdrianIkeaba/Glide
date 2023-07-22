@@ -124,7 +124,7 @@ class MessageAdapter(
                     context.startActivity(intent)
                 }
                 holder.binding.image.setOnLongClickListener {
-                    showDeleteDialog(message)
+                    showDeleteDialogReceiver(message)
                     true
                 }
 
