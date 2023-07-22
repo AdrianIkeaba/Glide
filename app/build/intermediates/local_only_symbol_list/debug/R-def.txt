@@ -60,6 +60,8 @@ drawable send_drawable
 drawable share
 drawable stroke
 drawable strokebtn
+drawable tick
+drawable tick_read
 drawable user
 drawable whitestroke
 font cantell

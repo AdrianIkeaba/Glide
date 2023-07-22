@@ -20,10 +20,6 @@
         "source": "/Users/adrianikeaba/.gradle/daemon/8.0/com.example.fastchat.app-main-61:/layout/activity_show_image.xml"
     },
     {
-        "merged": "com.example.fastchat.app-mergeDebugResources-58:/layout/receive_msg.xml",
-        "source": "com.example.fastchat.app-main-61:/layout/receive_msg.xml"
-    },
-    {
         "merged": "/Users/adrianikeaba/.gradle/daemon/8.0/com.example.fastchat.app-mergeDebugResources-58:/layout/activity_verification.xml",
         "source": "/Users/adrianikeaba/.gradle/daemon/8.0/com.example.fastchat.app-main-61:/layout/activity_verification.xml"
     },
@@ -74,6 +70,10 @@
     {
         "merged": "/Users/adrianikeaba/.gradle/daemon/8.0/com.example.fastchat.app-mergeDebugResources-58:/layout/delete_receiver.xml",
         "source": "/Users/adrianikeaba/.gradle/daemon/8.0/com.example.fastchat.app-main-61:/layout/delete_receiver.xml"
+    },
+    {
+        "merged": "com.example.fastchat.app-mergeDebugResources-58:/layout/user_list.xml",
+        "source": "com.example.fastchat.app-main-61:/layout/user_list.xml"
     },
     {
         "merged": "/Users/adrianikeaba/.gradle/daemon/8.0/com.example.fastchat.app-mergeDebugResources-58:/layout/fragment_frag_image_two.xml",

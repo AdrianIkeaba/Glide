@@ -10,9 +10,9 @@
         <shape>
             <solid android:color="@color/pBlue" />
             <corners
-                android:bottomRightRadius="45dp"
-                android:topRightRadius="45dp"
-                android:topLeftRadius="45dp" />
+                android:bottomRightRadius="15dp"
+                android:topRightRadius="15dp"
+                android:topLeftRadius="15dp" />
         </shape>
     </item>
 
