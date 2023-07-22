@@ -59,12 +59,12 @@ class Chat : AppCompatActivity() {
 
         val name = intent.getStringExtra("name")
         val image = intent.getStringExtra("profile")
-            binding.userNameTxt.text = name
-            Glide.with(this).load(image)
-                .placeholder(R.drawable.profile)
-                .apply(RequestOptions.circleCropTransform())
-                .into(binding.profileImage)
-            binding.profileImage.setBackgroundColor(Color.TRANSPARENT)
+        binding.userNameTxt.text = name
+        Glide.with(this).load(image)
+            .placeholder(R.drawable.profile)
+            .apply(RequestOptions.circleCropTransform())
+            .into(binding.profileImage)
+        binding.profileImage.setBackgroundColor(Color.TRANSPARENT)
 
 
         binding.backImg.setOnClickListener { finish() }
@@ -252,7 +252,8 @@ class Chat : AppCompatActivity() {
                                         .addOnSuccessListener { }
                                 }
                             } else {
-                                Toast.makeText(this, "Image upload failed", Toast.LENGTH_SHORT).show()
+                                Toast.makeText(this, "Image upload failed", Toast.LENGTH_SHORT)
+                                    .show()
                             }
                         }
 
@@ -261,12 +262,12 @@ class Chat : AppCompatActivity() {
                         if (reference.activeUploadTasks.isNotEmpty()) {
                             reference.activeUploadTasks.first().cancel()
                             dialog!!.dismiss()
-                            Toast.makeText(this, "Image upload timed out", Toast.LENGTH_SHORT).show()
+                            Toast.makeText(this, "Image upload timed out", Toast.LENGTH_SHORT)
+                                .show()
                         }
                     }, uploadTimeout)
                 }
             }
         }
     }
-
-    }
+}

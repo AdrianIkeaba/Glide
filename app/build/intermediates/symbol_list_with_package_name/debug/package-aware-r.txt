@@ -3170,6 +3170,8 @@ drawable share
 drawable stroke
 drawable strokebtn
 drawable test_level_drawable
+drawable tick
+drawable tick_read
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
 drawable user
