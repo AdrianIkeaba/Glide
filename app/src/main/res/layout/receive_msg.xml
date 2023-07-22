@@ -36,6 +36,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="start"
             android:fontFamily="@font/mukta_mahee"
+            android:maxWidth="250dp"
             android:minLines="1"
             android:text="Hello, how are you?"
             android:textAlignment="textStart"
