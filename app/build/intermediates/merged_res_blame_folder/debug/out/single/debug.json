@@ -24,6 +24,10 @@
         "source": "/Users/adrianikeaba/.gradle/daemon/8.0/com.example.fastchat.app-main-61:/drawable/chats.xml"
     },
     {
+        "merged": "/Users/adrianikeaba/.gradle/daemon/8.0/com.example.fastchat.app-merged_res-59:/drawable_recording.png.flat",
+        "source": "/Users/adrianikeaba/.gradle/daemon/8.0/com.example.fastchat.app-main-61:/drawable/recording.png"
+    },
+    {
         "merged": "/Users/adrianikeaba/.gradle/daemon/8.0/com.example.fastchat.app-merged_res-59:/mipmap-mdpi_ic_launcher_round.png.flat",
         "source": "/Users/adrianikeaba/.gradle/daemon/8.0/com.example.fastchat.app-main-61:/mipmap-mdpi/ic_launcher_round.png"
     },
@@ -60,16 +64,20 @@
         "source": "/Users/adrianikeaba/.gradle/daemon/8.0/com.example.fastchat.app-main-61:/drawable/invite.xml"
     },
     {
-        "merged": "/Users/adrianikeaba/.gradle/daemon/8.0/com.example.fastchat.app-merged_res-59:/drawable_country.xml.flat",
-        "source": "/Users/adrianikeaba/.gradle/daemon/8.0/com.example.fastchat.app-main-61:/drawable/country.xml"
-    },
-    {
         "merged": "/Users/adrianikeaba/.gradle/daemon/8.0/com.example.fastchat.app-merged_res-59:/drawable_tick.png.flat",
         "source": "/Users/adrianikeaba/.gradle/daemon/8.0/com.example.fastchat.app-main-61:/drawable/tick.png"
     },
     {
+        "merged": "/Users/adrianikeaba/.gradle/daemon/8.0/com.example.fastchat.app-merged_res-59:/drawable_country.xml.flat",
+        "source": "/Users/adrianikeaba/.gradle/daemon/8.0/com.example.fastchat.app-main-61:/drawable/country.xml"
+    },
+    {
         "merged": "/Users/adrianikeaba/.gradle/daemon/8.0/com.example.fastchat.app-merged_res-59:/drawable_collaborate.png.flat",
         "source": "/Users/adrianikeaba/.gradle/daemon/8.0/com.example.fastchat.app-main-61:/drawable/collaborate.png"
+    },
+    {
+        "merged": "/Users/adrianikeaba/.gradle/daemon/8.0/com.example.fastchat.app-merged_res-59:/drawable_pause.png.flat",
+        "source": "/Users/adrianikeaba/.gradle/daemon/8.0/com.example.fastchat.app-main-61:/drawable/pause.png"
     },
     {
         "merged": "/Users/adrianikeaba/.gradle/daemon/8.0/com.example.fastchat.app-merged_res-59:/font_cantell.ttf.flat",
@@ -144,6 +152,10 @@
         "source": "/Users/adrianikeaba/.gradle/daemon/8.0/com.example.fastchat.app-main-61:/drawable/back.xml"
     },
     {
+        "merged": "/Users/adrianikeaba/.gradle/daemon/8.0/com.example.fastchat.app-merged_res-59:/drawable_play.png.flat",
+        "source": "/Users/adrianikeaba/.gradle/daemon/8.0/com.example.fastchat.app-main-61:/drawable/play.png"
+    },
+    {
         "merged": "/Users/adrianikeaba/.gradle/daemon/8.0/com.example.fastchat.app-merged_res-59:/mipmap-xxxhdpi_ic_launcher.png.flat",
         "source": "/Users/adrianikeaba/.gradle/daemon/8.0/com.example.fastchat.app-main-61:/mipmap-xxxhdpi/ic_launcher.png"
     },
@@ -180,12 +192,12 @@
         "source": "/Users/adrianikeaba/.gradle/daemon/8.0/com.example.fastchat.app-main-61:/mipmap-xxxhdpi/ic_launcher_round.png"
     },
     {
-        "merged": "/Users/adrianikeaba/.gradle/daemon/8.0/com.example.fastchat.app-merged_res-59:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
-        "source": "/Users/adrianikeaba/.gradle/daemon/8.0/com.example.fastchat.app-main-61:/mipmap-anydpi-v26/ic_launcher_round.xml"
-    },
-    {
         "merged": "/Users/adrianikeaba/.gradle/daemon/8.0/com.example.fastchat.app-merged_res-59:/layout_setting_list.xml.flat",
         "source": "/Users/adrianikeaba/.gradle/daemon/8.0/com.example.fastchat.app-main-61:/layout/setting_list.xml"
+    },
+    {
+        "merged": "/Users/adrianikeaba/.gradle/daemon/8.0/com.example.fastchat.app-merged_res-59:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "/Users/adrianikeaba/.gradle/daemon/8.0/com.example.fastchat.app-main-61:/mipmap-anydpi-v26/ic_launcher_round.xml"
     },
     {
         "merged": "/Users/adrianikeaba/.gradle/daemon/8.0/com.example.fastchat.app-merged_res-59:/mipmap-xxhdpi_ic_launcher_round.png.flat",
@@ -198,6 +210,10 @@
     {
         "merged": "/Users/adrianikeaba/.gradle/daemon/8.0/com.example.fastchat.app-merged_res-59:/mipmap-xxhdpi_ic_launcher_foreground.png.flat",
         "source": "/Users/adrianikeaba/.gradle/daemon/8.0/com.example.fastchat.app-main-61:/mipmap-xxhdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "com.example.fastchat.app-merged_res-59:/layout_receive_msg.xml.flat",
+        "source": "com.example.fastchat.app-main-61:/layout/receive_msg.xml"
     },
     {
         "merged": "/Users/adrianikeaba/.gradle/daemon/8.0/com.example.fastchat.app-merged_res-59:/layout_fragment_frag_image_two.xml.flat",
@@ -304,6 +320,10 @@
         "source": "/Users/adrianikeaba/.gradle/daemon/8.0/com.example.fastchat.app-main-61:/mipmap-anydpi-v26/ic_launcher.xml"
     },
     {
+        "merged": "/Users/adrianikeaba/.gradle/daemon/8.0/com.example.fastchat.app-merged_res-59:/drawable_stop.png.flat",
+        "source": "/Users/adrianikeaba/.gradle/daemon/8.0/com.example.fastchat.app-main-61:/drawable/stop.png"
+    },
+    {
         "merged": "/Users/adrianikeaba/.gradle/daemon/8.0/com.example.fastchat.app-merged_res-59:/drawable_profile1.png.flat",
         "source": "/Users/adrianikeaba/.gradle/daemon/8.0/com.example.fastchat.app-main-61:/drawable/profile1.png"
     },
@@ -390,6 +410,10 @@
     {
         "merged": "/Users/adrianikeaba/.gradle/daemon/8.0/com.example.fastchat.app-merged_res-59:/drawable_stroke.xml.flat",
         "source": "/Users/adrianikeaba/.gradle/daemon/8.0/com.example.fastchat.app-main-61:/drawable/stroke.xml"
+    },
+    {
+        "merged": "/Users/adrianikeaba/.gradle/daemon/8.0/com.example.fastchat.app-merged_res-59:/drawable_microphone.png.flat",
+        "source": "/Users/adrianikeaba/.gradle/daemon/8.0/com.example.fastchat.app-main-61:/drawable/microphone.png"
     },
     {
         "merged": "/Users/adrianikeaba/.gradle/daemon/8.0/com.example.fastchat.app-merged_res-59:/drawable_chat_fill.png.flat",

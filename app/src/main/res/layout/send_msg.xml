@@ -68,6 +68,26 @@
 
         </androidx.cardview.widget.CardView>
 
+        <LinearLayout
+            android:id="@+id/audio_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/play"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="start"
+                android:paddingTop="4dp"
+                android:paddingBottom="4dp"
+                android:src="@drawable/play"
+                android:visibility="visible" />
+
+        </LinearLayout>
+
         <TextView
             android:id="@+id/time"
             android:layout_width="wrap_content"
@@ -76,6 +96,8 @@
             android:text="12:00am"
             android:textColor="#DCDCDC"
             android:textSize="8sp" />
+
+
 
     </LinearLayout>
 

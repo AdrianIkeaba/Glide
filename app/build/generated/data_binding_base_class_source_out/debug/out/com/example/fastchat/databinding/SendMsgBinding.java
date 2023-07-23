@@ -22,6 +22,9 @@ public final class SendMsgBinding implements ViewBinding {
   private final LinearLayout rootView;
 
   @NonNull
+  public final LinearLayout audioLayout;
+
+  @NonNull
   public final LinearLayout hLinear;
 
   @NonNull
@@ -34,19 +37,25 @@ public final class SendMsgBinding implements ViewBinding {
   public final LinearLayout mLinear;
 
   @NonNull
+  public final ImageView play;
+
+  @NonNull
   public final TextView sendMessage;
 
   @NonNull
   public final TextView time;
 
-  private SendMsgBinding(@NonNull LinearLayout rootView, @NonNull LinearLayout hLinear,
-      @NonNull ImageView image, @NonNull CardView imageCard, @NonNull LinearLayout mLinear,
-      @NonNull TextView sendMessage, @NonNull TextView time) {
+  private SendMsgBinding(@NonNull LinearLayout rootView, @NonNull LinearLayout audioLayout,
+      @NonNull LinearLayout hLinear, @NonNull ImageView image, @NonNull CardView imageCard,
+      @NonNull LinearLayout mLinear, @NonNull ImageView play, @NonNull TextView sendMessage,
+      @NonNull TextView time) {
     this.rootView = rootView;
+    this.audioLayout = audioLayout;
     this.hLinear = hLinear;
     this.image = image;
     this.imageCard = imageCard;
     this.mLinear = mLinear;
+    this.play = play;
     this.sendMessage = sendMessage;
     this.time = time;
   }
@@ -78,6 +87,12 @@ public final class SendMsgBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.audio_layout;
+      LinearLayout audioLayout = ViewBindings.findChildViewById(rootView, id);
+      if (audioLayout == null) {
+        break missingId;
+      }
+
       id = R.id.hLinear;
       LinearLayout hLinear = ViewBindings.findChildViewById(rootView, id);
       if (hLinear == null) {
@@ -98,6 +113,12 @@ public final class SendMsgBinding implements ViewBinding {
 
       LinearLayout mLinear = (LinearLayout) rootView;
 
+      id = R.id.play;
+      ImageView play = ViewBindings.findChildViewById(rootView, id);
+      if (play == null) {
+        break missingId;
+      }
+
       id = R.id.sendMessage;
       TextView sendMessage = ViewBindings.findChildViewById(rootView, id);
       if (sendMessage == null) {
@@ -110,8 +131,8 @@ public final class SendMsgBinding implements ViewBinding {
         break missingId;
       }
 
-      return new SendMsgBinding((LinearLayout) rootView, hLinear, image, imageCard, mLinear,
-          sendMessage, time);
+      return new SendMsgBinding((LinearLayout) rootView, audioLayout, hLinear, image, imageCard,
+          mLinear, play, sendMessage, time);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

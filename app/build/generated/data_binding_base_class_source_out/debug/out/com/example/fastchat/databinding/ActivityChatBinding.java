@@ -31,6 +31,9 @@ public final class ActivityChatBinding implements ViewBinding {
   public final ImageView call;
 
   @NonNull
+  public final ImageView camera;
+
+  @NonNull
   public final CardView cardView2;
 
   @NonNull
@@ -41,9 +44,6 @@ public final class ActivityChatBinding implements ViewBinding {
 
   @NonNull
   public final ConstraintLayout cont;
-
-  @NonNull
-  public final ImageView imageView6;
 
   @NonNull
   public final LinearLayout linearLayout;
@@ -73,8 +73,8 @@ public final class ActivityChatBinding implements ViewBinding {
   public final TextView userNameTxt;
 
   private ActivityChatBinding(@NonNull ConstraintLayout rootView, @NonNull ImageView backImg,
-      @NonNull ImageView call, @NonNull CardView cardView2, @NonNull CardView cardView3,
-      @NonNull ImageView clip, @NonNull ConstraintLayout cont, @NonNull ImageView imageView6,
+      @NonNull ImageView call, @NonNull ImageView camera, @NonNull CardView cardView2,
+      @NonNull CardView cardView3, @NonNull ImageView clip, @NonNull ConstraintLayout cont,
       @NonNull LinearLayout linearLayout, @NonNull LinearLayout linearLayout4,
       @NonNull EditText messageEdt, @NonNull ImageView more, @NonNull ImageView profileImage,
       @NonNull RecyclerView recyclerView, @NonNull ImageView send, @NonNull TextView status,
@@ -82,11 +82,11 @@ public final class ActivityChatBinding implements ViewBinding {
     this.rootView = rootView;
     this.backImg = backImg;
     this.call = call;
+    this.camera = camera;
     this.cardView2 = cardView2;
     this.cardView3 = cardView3;
     this.clip = clip;
     this.cont = cont;
-    this.imageView6 = imageView6;
     this.linearLayout = linearLayout;
     this.linearLayout4 = linearLayout4;
     this.messageEdt = messageEdt;
@@ -137,6 +137,12 @@ public final class ActivityChatBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.camera;
+      ImageView camera = ViewBindings.findChildViewById(rootView, id);
+      if (camera == null) {
+        break missingId;
+      }
+
       id = R.id.cardView2;
       CardView cardView2 = ViewBindings.findChildViewById(rootView, id);
       if (cardView2 == null) {
@@ -156,12 +162,6 @@ public final class ActivityChatBinding implements ViewBinding {
       }
 
       ConstraintLayout cont = (ConstraintLayout) rootView;
-
-      id = R.id.imageView6;
-      ImageView imageView6 = ViewBindings.findChildViewById(rootView, id);
-      if (imageView6 == null) {
-        break missingId;
-      }
 
       id = R.id.linearLayout;
       LinearLayout linearLayout = ViewBindings.findChildViewById(rootView, id);
@@ -217,9 +217,9 @@ public final class ActivityChatBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityChatBinding((ConstraintLayout) rootView, backImg, call, cardView2,
-          cardView3, clip, cont, imageView6, linearLayout, linearLayout4, messageEdt, more,
-          profileImage, recyclerView, send, status, userNameTxt);
+      return new ActivityChatBinding((ConstraintLayout) rootView, backImg, call, camera, cardView2,
+          cardView3, clip, cont, linearLayout, linearLayout4, messageEdt, more, profileImage,
+          recyclerView, send, status, userNameTxt);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
