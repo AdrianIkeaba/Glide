@@ -423,9 +423,6 @@ class Chat : AppCompatActivity() {
                 }
             }
     }
-    override fun onStop() {
-        super.onStop()
-    }
     private fun stopBlinkAnimation(view: ImageView) {
         // Clear the animation and remove the AnimationListener
         view.clearAnimation()
