@@ -169,6 +169,18 @@ class Chat : AppCompatActivity() {
                     }
                     binding.camera.setImageResource(R.drawable.send)
                 }
+            } else {
+                mediaRecorder?.apply {
+                    stop()
+                    reset()
+                    release()
+                }
+                isRecording = false
+                binding.camera.setImageResource(R.drawable.camera)
+                binding.send.setImageResource(R.drawable.send)
+                stopBlinkAnimation(binding.send)
+                binding.messageEdt.setText("")
+                Toast.makeText(applicationContext, "Voice recording cancelled", Toast.LENGTH_SHORT).show()
             }
         }
 
@@ -323,6 +335,8 @@ class Chat : AppCompatActivity() {
             blinkAnimation(binding.send)
         } catch (e: Exception) {
             // Handle any errors
+            binding.messageEdt.setText("")
+            binding.camera.setImageResource(R.drawable.camera)
             Toast.makeText(applicationContext, "Error starting the mic", Toast.LENGTH_SHORT).show()
             Log.d("mic_error", e.toString())
         }
