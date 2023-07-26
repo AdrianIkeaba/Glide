@@ -79,6 +79,7 @@ font mukta_mahee_medium
 font mukta_mahee_semibold
 id aboutMe
 id appName
+id audioLength
 id audio_layout
 id back
 id back2

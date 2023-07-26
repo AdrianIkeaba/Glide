@@ -88,6 +88,16 @@
                 android:src="@drawable/play"
                 android:visibility="visible" />
 
+            <TextView
+                android:id="@+id/audioLength"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:layout_marginLeft="10dp"
+                android:text="0:00"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp" />
+
         </LinearLayout>
 
         <TextView

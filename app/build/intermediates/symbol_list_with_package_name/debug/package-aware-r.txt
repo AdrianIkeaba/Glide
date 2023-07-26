@@ -3277,6 +3277,7 @@ id appName
 id arc
 id asConfigured
 id async
+id audioLength
 id audio_layout
 id auto
 id autoComplete

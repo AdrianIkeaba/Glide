@@ -3276,6 +3276,7 @@ int id appName 0x7f0a0054
 int id arc 0x7f0a0055
 int id asConfigured 0x7f0a0056
 int id async 0x7f0a0057
+int id audioLength 0x7f0a025e
 int id audio_layout 0x7f0a025c
 int id auto 0x7f0a0058
 int id autoComplete 0x7f0a0059

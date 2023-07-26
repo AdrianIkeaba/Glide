@@ -4,13 +4,9 @@ import android.content.Context
 import android.content.Intent
 import android.graphics.Color
 import android.media.MediaPlayer
-import android.media.MediaRecorder
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
-import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.recyclerview.widget.RecyclerView
@@ -21,6 +17,11 @@ import com.example.fastchat.databinding.ReceiveMsgBinding
 import com.example.fastchat.databinding.SendMsgBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.FirebaseDatabase
+import kotlinx.coroutines.DelicateCoroutinesApi
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 import java.text.SimpleDateFormat
 import java.util.Date
 import java.util.Locale
@@ -60,6 +61,7 @@ class MessageAdapter(
         }
     }
 
+    @OptIn(DelicateCoroutinesApi::class)
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
         val message = messages[position]
 
@@ -91,33 +93,54 @@ class MessageAdapter(
                     }
                 }
                 "voice" -> {
-                    holder.binding.sendMessage.text = "Voice note"
+                    holder.binding.sendMessage.visibility = View.GONE
                     holder.binding.audioLayout.visibility = View.VISIBLE
                     holder.binding.imageCard.visibility = View.GONE
 
                     val audioFileUrl = message.imageUrl
                     val mediaPlayer = MediaPlayer()
+                    mediaPlayer.setDataSource(audioFileUrl)
+                    mediaPlayer.prepare()
+
+                    // Get the duration of the audio file and update the TextView
+                    val durationInMillis = mediaPlayer.duration
+                    val durationString = convertDurationToString(durationInMillis)
+                    holder.binding.audioLength.text = durationString
 
                     holder.binding.play.setOnClickListener {
-                        if (!mediaPlayer.isPlaying) {
+                        // Use Kotlin Coroutine to play audio on a background thread
+                        GlobalScope.launch(Dispatchers.IO) {
+                            val mediaPlayer = MediaPlayer()
+
                             try {
                                 mediaPlayer.setDataSource(audioFileUrl)
-                                mediaPlayer.prepareAsync()
-                                mediaPlayer.setOnPreparedListener { mp ->
-                                    mp.start()
-                                    holder.binding.play.setImageResource(R.drawable.pause)
+                                mediaPlayer.prepare()
+
+                                withContext(Dispatchers.Main) {
+                                    // Get the duration of the audio file and update the TextView on the main thread
+                                    val durationInMillis = mediaPlayer.duration
+                                    val durationString = convertDurationToString(durationInMillis)
+                                    holder.binding.audioLength.text = durationString
                                 }
+
+                                mediaPlayer.start()
+                                holder.binding.play.setImageResource(R.drawable.pause)
+
                                 mediaPlayer.setOnCompletionListener {
                                     holder.binding.play.setImageResource(R.drawable.play)
-                                    releaseMediaPlayer(mediaPlayer)
+                                    mediaPlayer.reset()
+                                    mediaPlayer.release()
                                 }
                             } catch (e: Exception) {
-                                Toast.makeText(context, "Unable to play voice note", Toast.LENGTH_SHORT).show()
-                                Log.d("audio_error_play", e.toString())
-                                releaseMediaPlayer(mediaPlayer)
+                                withContext(Dispatchers.Main) {
+                                    Toast.makeText(
+                                        context,
+                                        "Unable to play voice note",
+                                        Toast.LENGTH_SHORT
+                                    ).show()
+                                }
+                                mediaPlayer.release()
                             }
-                        } else {
-                            releaseMediaPlayer(mediaPlayer)
                         }
                     }
                 }
@@ -159,43 +182,57 @@ class MessageAdapter(
                         true
                     }
                 }
-
                 "voice" -> {
-                    holder.binding.sendMessage.text = "Voice note"
+                    holder.binding.sendMessage.visibility = View.GONE
                     holder.binding.audioLayout.visibility = View.VISIBLE
                     holder.binding.imageCard.visibility = View.GONE
 
                     val audioFileUrl = message.imageUrl
                     val mediaPlayer = MediaPlayer()
+                    mediaPlayer.setDataSource(audioFileUrl)
+                    mediaPlayer.prepare()
+
+                    // Get the duration of the audio file and update the TextView
+                    val durationInMillis = mediaPlayer.duration
+                    val durationString = convertDurationToString(durationInMillis)
+                    holder.binding.audioLength.text = durationString
 
                     holder.binding.play.setOnClickListener {
-                        if (!mediaPlayer.isPlaying) {
+                        // Use Kotlin Coroutine to play audio on a background thread
+                        GlobalScope.launch(Dispatchers.IO) {
+                            val mediaPlayer = MediaPlayer()
+
                             try {
                                 mediaPlayer.setDataSource(audioFileUrl)
-                                mediaPlayer.prepareAsync()
-                                mediaPlayer.setOnPreparedListener { mp ->
-                                    mp.start()
-                                    holder.binding.play.setImageResource(R.drawable.pause)
+                                mediaPlayer.prepare()
+
+                                withContext(Dispatchers.Main) {
+                                    // Get the duration of the audio file and update the TextView on the main thread
+                                    val durationInMillis = mediaPlayer.duration
+                                    val durationString = convertDurationToString(durationInMillis)
+                                    holder.binding.audioLength.text = durationString
                                 }
+
+                                mediaPlayer.start()
+                                holder.binding.play.setImageResource(R.drawable.pause)
+
                                 mediaPlayer.setOnCompletionListener {
                                     holder.binding.play.setImageResource(R.drawable.play)
-                                    releaseMediaPlayer(mediaPlayer)
+                                    mediaPlayer.release()
                                 }
                             } catch (e: Exception) {
-                                Toast.makeText(
-                                    context,
-                                    "$e",
-                                    Toast.LENGTH_SHORT
-                                ).show()
-                                Log.d("audio_error_play", e.toString())
-                                releaseMediaPlayer(mediaPlayer)
+                                withContext(Dispatchers.Main) {
+                                    Toast.makeText(
+                                        context,
+                                        "Unable to play voice note",
+                                        Toast.LENGTH_SHORT
+                                    ).show()
+                                }
+                                mediaPlayer.release()
                             }
-                        } else {
-                            releaseMediaPlayer(mediaPlayer)
                         }
                     }
-                }
-                else -> {
+                } else -> {
                     holder.binding.sendMessage.text = message.message
                     holder.binding.image.visibility = View.GONE
                     holder.binding.imageCard.visibility = View.GONE
@@ -299,4 +336,15 @@ class MessageAdapter(
         return sdf.format(date)
     }
 
+    private fun convertDurationToString(durationInMillis: Int): String {
+        val hours = (durationInMillis / (1000 * 60 * 60)) % 24
+        val minutes = (durationInMillis / (1000 * 60)) % 60
+        val seconds = (durationInMillis / 1000) % 60
+
+        return when {
+            hours > 0 -> String.format("%02d:%02d:%02d", hours, minutes, seconds)
+            minutes > 0 -> String.format("%02d:%02d", minutes, seconds)
+            else -> String.format("00:%02d", seconds)
+        }
+    }
 }
