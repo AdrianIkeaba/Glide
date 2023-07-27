@@ -25,6 +25,9 @@ public final class ReceiveMsgBinding implements ViewBinding {
   public final LinearLayout audioLayout;
 
   @NonNull
+  public final TextView audioLength;
+
+  @NonNull
   public final LinearLayout hLinear;
 
   @NonNull
@@ -46,11 +49,12 @@ public final class ReceiveMsgBinding implements ViewBinding {
   public final TextView time;
 
   private ReceiveMsgBinding(@NonNull LinearLayout rootView, @NonNull LinearLayout audioLayout,
-      @NonNull LinearLayout hLinear, @NonNull ImageView image, @NonNull CardView imageCard,
-      @NonNull LinearLayout mLinear, @NonNull ImageView play, @NonNull TextView sendMessage,
-      @NonNull TextView time) {
+      @NonNull TextView audioLength, @NonNull LinearLayout hLinear, @NonNull ImageView image,
+      @NonNull CardView imageCard, @NonNull LinearLayout mLinear, @NonNull ImageView play,
+      @NonNull TextView sendMessage, @NonNull TextView time) {
     this.rootView = rootView;
     this.audioLayout = audioLayout;
+    this.audioLength = audioLength;
     this.hLinear = hLinear;
     this.image = image;
     this.imageCard = imageCard;
@@ -93,6 +97,12 @@ public final class ReceiveMsgBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.audioLength;
+      TextView audioLength = ViewBindings.findChildViewById(rootView, id);
+      if (audioLength == null) {
+        break missingId;
+      }
+
       id = R.id.hLinear;
       LinearLayout hLinear = ViewBindings.findChildViewById(rootView, id);
       if (hLinear == null) {
@@ -131,8 +141,8 @@ public final class ReceiveMsgBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ReceiveMsgBinding((LinearLayout) rootView, audioLayout, hLinear, image, imageCard,
-          mLinear, play, sendMessage, time);
+      return new ReceiveMsgBinding((LinearLayout) rootView, audioLayout, audioLength, hLinear,
+          image, imageCard, mLinear, play, sendMessage, time);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

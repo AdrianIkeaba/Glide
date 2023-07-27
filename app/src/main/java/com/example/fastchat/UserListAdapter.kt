@@ -11,7 +11,7 @@ import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import com.example.fastchat.databinding.UserListBinding
 
-class UserListAdapter(var context: Context, var userList: ArrayList<UserListModel>): RecyclerView.Adapter<UserListAdapter.UserViewHolder>() {
+class UserListAdapter(var context: Context, private var userList: ArrayList<UserListModel>): RecyclerView.Adapter<UserListAdapter.UserViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): UserListAdapter.UserViewHolder {
         val v = LayoutInflater.from(context).inflate(R.layout.user_list, parent, false)
@@ -28,7 +28,7 @@ class UserListAdapter(var context: Context, var userList: ArrayList<UserListMode
             .apply(RequestOptions.circleCropTransform())
             .into(holder.binding.profile)
             holder.binding.profile.setBackgroundColor(Color.TRANSPARENT)
-        holder.binding.message.text = "Say hello!"
+        "Say hello!".also { holder.binding.message.text = it }
 
         holder.itemView.setOnClickListener {
             val intent = Intent(context, Chat::class.java)

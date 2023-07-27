@@ -4,7 +4,17 @@
             "outputFile": "com.example.fastchat.app-mergeDebugResources-57:/values-v24/values-v24.xml",
             "map": [
                 {
-                    "source": "/Users/adrianikeaba/.gradle/caches/transforms-3/ae0eefd6ee7697d1e3467d1afe5ef714/transformed/material-1.9.0/res/values-v24/values-v24.xml",
+                    "source": "/Users/adrianikeaba/.gradle/caches/transforms-3/e120ce1242c076c829354c8df0c84914/transformed/appcompat-1.6.1/res/values-v24/values-v24.xml",
+                    "from": {
+                        "startLines": "2,3",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,212",
+                        "endColumns": "156,134",
+                        "endOffsets": "207,342"
+                    }
+                },
+                {
+                    "source": "/Users/adrianikeaba/.gradle/caches/transforms-3/e3437efc535829b95b9e24e104be2dcc/transformed/material-1.9.0/res/values-v24/values-v24.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,9,12,15",
                         "startColumns": "4,4,4,4,4,4,4,4",
@@ -20,16 +30,6 @@
                         "endLines": "4,5,6,7,10,13,16,19",
                         "endColumns": "84,98,86,100,10,10,10,10",
                         "endOffsets": "427,526,613,714,913,1126,1327,1542"
-                    }
-                },
-                {
-                    "source": "/Users/adrianikeaba/.gradle/caches/transforms-3/4fc5ae541017ceb5ba71e117ec1ae4c2/transformed/appcompat-1.6.1/res/values-v24/values-v24.xml",
-                    "from": {
-                        "startLines": "2,3",
-                        "startColumns": "4,4",
-                        "startOffsets": "55,212",
-                        "endColumns": "156,134",
-                        "endOffsets": "207,342"
                     }
                 }
             ]

@@ -4,7 +4,7 @@
             "outputFile": "com.example.fastchat.app-mergeDebugResources-57:/values-xlarge-v4/values-xlarge-v4.xml",
             "map": [
                 {
-                    "source": "/Users/adrianikeaba/.gradle/caches/transforms-3/4fc5ae541017ceb5ba71e117ec1ae4c2/transformed/appcompat-1.6.1/res/values-xlarge-v4/values-xlarge-v4.xml",
+                    "source": "/Users/adrianikeaba/.gradle/caches/transforms-3/e120ce1242c076c829354c8df0c84914/transformed/appcompat-1.6.1/res/values-xlarge-v4/values-xlarge-v4.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7",
                         "startColumns": "4,4,4,4,4,4",

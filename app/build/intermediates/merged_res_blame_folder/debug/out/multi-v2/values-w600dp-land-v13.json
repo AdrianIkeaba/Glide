@@ -4,7 +4,7 @@
             "outputFile": "com.example.fastchat.app-mergeDebugResources-57:/values-w600dp-land-v13/values-w600dp-land-v13.xml",
             "map": [
                 {
-                    "source": "/Users/adrianikeaba/.gradle/caches/transforms-3/ae0eefd6ee7697d1e3467d1afe5ef714/transformed/material-1.9.0/res/values-w600dp-land-v13/values-w600dp-land-v13.xml",
+                    "source": "/Users/adrianikeaba/.gradle/caches/transforms-3/e3437efc535829b95b9e24e104be2dcc/transformed/material-1.9.0/res/values-w600dp-land-v13/values-w600dp-land-v13.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
