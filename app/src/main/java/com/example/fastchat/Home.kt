@@ -97,6 +97,7 @@ class Home : AppCompatActivity() {
                     // Handle other fragments as needed
                 }
             }
+
         })
 
         imageSpin.setOnClickListener {
