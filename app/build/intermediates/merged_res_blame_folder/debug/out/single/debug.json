@@ -8,6 +8,10 @@
         "source": "/Users/adrianikeaba/.gradle/daemon/8.0/com.example.fastchat.app-main-61:/drawable/ic_launcher_background.xml"
     },
     {
+        "merged": "com.example.fastchat.app-merged_res-59:/drawable_deleted_send.xml.flat",
+        "source": "com.example.fastchat.app-main-61:/drawable/deleted_send.xml"
+    },
+    {
         "merged": "/Users/adrianikeaba/.gradle/daemon/8.0/com.example.fastchat.app-merged_res-59:/drawable_tick_read.png.flat",
         "source": "/Users/adrianikeaba/.gradle/daemon/8.0/com.example.fastchat.app-main-61:/drawable/tick_read.png"
     },
@@ -18,10 +22,6 @@
     {
         "merged": "/Users/adrianikeaba/.gradle/daemon/8.0/com.example.fastchat.app-merged_res-59:/font_mukta_mahee_medium.xml.flat",
         "source": "/Users/adrianikeaba/.gradle/daemon/8.0/com.example.fastchat.app-main-61:/font/mukta_mahee_medium.xml"
-    },
-    {
-        "merged": "com.example.fastchat.app-merged_res-59:/layout_user_list.xml.flat",
-        "source": "com.example.fastchat.app-main-61:/layout/user_list.xml"
     },
     {
         "merged": "/Users/adrianikeaba/.gradle/daemon/8.0/com.example.fastchat.app-merged_res-59:/drawable_chats.xml.flat",
@@ -266,6 +266,10 @@
     {
         "merged": "/Users/adrianikeaba/.gradle/daemon/8.0/com.example.fastchat.app-merged_res-59:/layout_delete_receiver.xml.flat",
         "source": "/Users/adrianikeaba/.gradle/daemon/8.0/com.example.fastchat.app-main-61:/layout/delete_receiver.xml"
+    },
+    {
+        "merged": "com.example.fastchat.app-merged_res-59:/drawable_deleted_receive.xml.flat",
+        "source": "com.example.fastchat.app-main-61:/drawable/deleted_receive.xml"
     },
     {
         "merged": "/Users/adrianikeaba/.gradle/daemon/8.0/com.example.fastchat.app-merged_res-59:/layout_delete_layout.xml.flat",

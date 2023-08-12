@@ -9,6 +9,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
+import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.fastchat.databinding.DeleteLayoutBinding
@@ -144,6 +145,10 @@ class MessageAdapter(
                         }
                     }
                 }
+                "This message was deleted!" -> {
+                    holder.binding.hLinear.setBackgroundResource(R.drawable.deleted_send)
+                    holder.binding.sendMessage.text = "This message was deleted!"
+                }
                 else -> {
                     holder.binding.sendMessage.text = message.message
                     holder.binding.image.visibility = View.GONE
@@ -232,7 +237,11 @@ class MessageAdapter(
                             }
                         }
                     }
-                } else -> {
+                }
+                "This message was deleted!" -> {
+                    holder.binding.hLinear.setBackgroundResource(R.drawable.receive_drawable)
+                    holder.binding.sendMessage.text = "This message was deleted"
+                }else -> {
                     holder.binding.sendMessage.text = message.message
                     holder.binding.image.visibility = View.GONE
                     holder.binding.imageCard.visibility = View.GONE

@@ -9,4 +9,5 @@
     <color name="pBlue">#1C2333</color>
     <color name="royalBlue">#3359D3</color>
     <color name="highlihht">#56A4CCFF</color>
+    <color name="deletedMessage">#303843</color>
 </resources>

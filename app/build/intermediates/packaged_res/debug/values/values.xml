@@ -25,6 +25,7 @@
     <color name="back">#1B1C20</color>
     <color name="black">#FF000000</color>
     <color name="blue">#1E66C2</color>
+    <color name="deletedMessage">#303843</color>
     <color name="highlihht">#56A4CCFF</color>
     <color name="ic_launcher_background">#FFFFFF</color>
     <color name="lightBlue">#C8A4CCFF</color>

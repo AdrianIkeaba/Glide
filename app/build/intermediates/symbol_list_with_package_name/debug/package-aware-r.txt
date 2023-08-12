@@ -1431,6 +1431,7 @@ color common_google_signin_btn_text_light_disabled
 color common_google_signin_btn_text_light_focused
 color common_google_signin_btn_text_light_pressed
 color common_google_signin_btn_tint
+color deletedMessage
 color design_bottom_navigation_shadow_color
 color design_box_stroke_color
 color design_dark_default_color_background
@@ -3046,6 +3047,8 @@ drawable compat_splash_screen
 drawable compat_splash_screen_no_icon_background
 drawable country
 drawable custom_progress
+drawable deleted_receive
+drawable deleted_send
 drawable design_fab_background
 drawable design_ic_visibility
 drawable design_ic_visibility_off
@@ -3664,6 +3667,7 @@ id selected
 id selection_type
 id send
 id sendMessage
+id send_drawable
 id settImage
 id settName
 id share

@@ -9,6 +9,7 @@ array preloaded_fonts
 color back
 color black
 color blue
+color deletedMessage
 color highlihht
 color ic_launcher_background
 color lightBlue
@@ -34,6 +35,8 @@ drawable cloud
 drawable collaborate
 drawable country
 drawable custom_progress
+drawable deleted_receive
+drawable deleted_send
 drawable download1
 drawable emptychat
 drawable glidelogo
@@ -151,6 +154,7 @@ id recyclerView
 id resend
 id send
 id sendMessage
+id send_drawable
 id settImage
 id settName
 id share

@@ -4,7 +4,7 @@
             "outputFile": "com.example.fastchat.test.app-mergeDebugAndroidTestResources-3:/values-v28/values-v28.xml",
             "map": [
                 {
-                    "source": "/Users/adrianikeaba/.gradle/caches/transforms-3/15584792a0176b6a6248aaefd06c41d9/transformed/jetified-core-1.5.0/res/values-v28/values.xml",
+                    "source": "/Users/adrianikeaba/.gradle/caches/transforms-3/2d5b76e6358bae7b61b63b028f836548/transformed/jetified-core-1.5.0/res/values-v28/values.xml",
                     "from": {
                         "startLines": "4,13",
                         "startColumns": "0,0",
