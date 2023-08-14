@@ -9,7 +9,6 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
-import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.fastchat.databinding.DeleteLayoutBinding
@@ -150,6 +149,7 @@ class MessageAdapter(
                     holder.binding.sendMessage.text = "This message was deleted!"
                 }
                 else -> {
+                    holder.resetBackgroundColor()
                     holder.binding.sendMessage.text = message.message
                     holder.binding.image.visibility = View.GONE
                     holder.binding.imageCard.visibility = View.GONE
@@ -239,9 +239,10 @@ class MessageAdapter(
                     }
                 }
                 "This message was deleted!" -> {
-                    holder.binding.hLinear.setBackgroundResource(R.drawable.receive_drawable)
+                    holder.binding.hLinear.setBackgroundResource(R.drawable.deleted_receive)
                     holder.binding.sendMessage.text = "This message was deleted"
                 }else -> {
+                    holder.resetBackgroundColor()
                     holder.binding.sendMessage.text = message.message
                     holder.binding.image.visibility = View.GONE
                     holder.binding.imageCard.visibility = View.GONE
@@ -255,10 +256,6 @@ class MessageAdapter(
         }
     }
 
-    private fun releaseMediaPlayer(mediaPlayer: MediaPlayer) {
-        mediaPlayer.reset()
-        mediaPlayer.release()
-    }
 
     private fun showDeleteDialogReceiver(message: Message) {
         val view = LayoutInflater.from(context).inflate(R.layout.delete_receiver, null)
@@ -333,10 +330,16 @@ class MessageAdapter(
 
     inner class SentMsgHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val binding: SendMsgBinding = SendMsgBinding.bind(itemView)
+        fun resetBackgroundColor() {
+            binding.hLinear.setBackgroundResource(R.drawable.send_drawable)
+        }
     }
 
     inner class ReceiveMsgHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val binding: ReceiveMsgBinding = ReceiveMsgBinding.bind(itemView)
+        fun resetBackgroundColor() {
+            binding.hLinear.setBackgroundResource(R.drawable.receive_drawable)
+        }
     }
 
     private fun convertTimestampToTime(timestamp: Long): String {
